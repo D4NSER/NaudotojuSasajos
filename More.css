@@ -1,0 +1,312 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    /* Dark background for better contrast */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+header:hover {
+    background-color: rgb(138, 137, 137); /* Light background when hovered */
+}
+
+header:hover h1 {
+    color: black; /* Change SportsyNews text color to black on hover */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Inherits the background from header */
+    padding: 1rem;
+    transition: opacity 0.4s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Adds spacing between nav items */
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.4s ease-in-out;
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+nav ul li:hover a {
+    color: black; /* Change text color to black on hover */
+}
+
+nav a {
+    color: inherit; /* Keep text color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    display: block; /* Ensure the anchor takes up full li space */
+}
+
+h1 {
+    color: #e0e0e0;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #1d1d1d;
+    /* Dark table background */
+}
+
+th,
+td {
+    border: 1px solid #333;
+    /* Border color */
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #2a2a2a;
+    /* Header background */
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+    /* Even row color */
+}
+
+tr:hover {
+    background-color: #444;
+    /* Row hover color */
+}
+
+a {
+    color: transparent;
+    /* Makes the link text transparent */
+    text-decoration: none;
+    /* Removes underline */
+}
+
+td a {
+    color: inherit;
+    /* Makes the link inherit the cell's text color */
+    text-decoration: none;
+    /* Removes underline from the link */
+}
+
+button {
+    background-color: #666;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Photo Gallery Section */
+.f1-photos {
+    text-align: center;
+    padding: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-gallery img {
+    width: 200px;
+    /* Set a fixed width */
+    height: 120px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Maintain aspect ratio by cropping if necessary */
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: transform 0.3s;
+    /* Animation effect */
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+/* General Details Styles */
+details {
+    background-color: #2c2c2c;
+    /* Dark gray background */
+    border: 1px solid #444;
+    /* Darker border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 16px;
+    /* Padding around the content */
+    margin: 12px 0;
+    /* Space between details blocks */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Smooth transition */
+    color: #e0e0e0;
+    /* Light text color for better readability */
+}
+
+details summary {
+    font-weight: bold;
+    /* Make the summary bold */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    padding: 8px;
+    /* Padding around the summary */
+    outline: none;
+    /* Remove default outline */
+    background-color: #444;
+    /* Darker background for the summary */
+    color: #e0e0e0;
+    /* Light text color for the summary */
+    border-radius: 5px;
+    /* Rounded corners for the summary */
+}
+
+/* Change background on hover */
+details summary:hover {
+    background-color: #555;
+    /* Slightly lighter gray on hover */
+}
+
+/* Change styles when details are open */
+details[open] {
+    background-color: #3b3b3b;
+    /* Darker gray background when open */
+    border-color: #007bff;
+    /* Change border color when open */
+}
+
+/* Paragraph styles within details */
+details p {
+    margin-top: 10px;
+    /* Space above paragraphs */
+    color: #e0e0e0;
+    /* Light text color for paragraphs */
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+summary:hover {
+    color: #f0f0f0;
+    /* Color change on hover for summary */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    nav ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .photo-gallery img {
+        width: 150px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 760px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    table,
+    .photo-gallery img {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    th, td {
+        padding: 5px;
+        font-size: 0.8em;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .photo-gallery img {
+        width: 150px;
+        height: 90px;
+    }
+
+    details {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    summary {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}

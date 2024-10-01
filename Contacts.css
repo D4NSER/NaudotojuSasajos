@@ -1,0 +1,18 @@
+body {
+    background-color: #f0f0f0; /* Lighter background for contrast */
+    color: #333333; /* Dark text for readability */
+    font-family: 'Alatsi', sans-serif;
+    line-height: 1.6;
+    padding: 20px; /* Added padding */
+}
+
+h2 {
+    color: #ff1e00; /* Accent color for headings */
+    text-align: center;
+}
+
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
